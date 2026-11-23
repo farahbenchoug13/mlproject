@@ -1,0 +1,117 @@
+{
+  "n_images_raw": 15921,
+  "n_images_used": 15795,
+  "split_sizes": {
+    "train": 11056,
+    "val": 2369,
+    "test": 2370
+  },
+  "class_counts": {
+    "angry": 2256,
+    "happy": 4784,
+    "relaxed": 4349,
+    "sad": 4532
+  },
+  "best_model": "ViT fine-tuned",
+  "results": [
+    {
+      "model": "ViT fine-tuned",
+      "accuracy": 0.6101,
+      "macro_f1": 0.5934,
+      "train_time_s": 512.7644,
+      "params": 85801732.0,
+      "f1_angry": 0.4771,
+      "f1_happy": 0.6681,
+      "f1_relaxed": 0.5948,
+      "f1_sad": 0.6334
+    },
+    {
+      "model": "ResNet50 fine-tuned",
+      "accuracy": 0.5937,
+      "macro_f1": 0.578,
+      "train_time_s": 559.4102,
+      "params": 23516228.0,
+      "f1_angry": 0.4554,
+      "f1_happy": 0.6512,
+      "f1_relaxed": 0.5798,
+      "f1_sad": 0.6258
+    },
+    {
+      "model": "EfficientNet-B0 fine-tuned",
+      "accuracy": 0.5384,
+      "macro_f1": 0.5191,
+      "train_time_s": 523.5463,
+      "params": 4012672.0,
+      "f1_angry": 0.3902,
+      "f1_happy": 0.5994,
+      "f1_relaxed": 0.4962,
+      "f1_sad": 0.5906
+    },
+    {
+      "model": "ResNet50 frozen + LogReg",
+      "accuracy": 0.4747,
+      "macro_f1": 0.461,
+      "train_time_s": 80.9692,
+      "params": NaN,
+      "f1_angry": 0.3447,
+      "f1_happy": 0.538,
+      "f1_relaxed": 0.4636,
+      "f1_sad": 0.4977
+    },
+    {
+      "model": "Random forest on colors",
+      "accuracy": 0.389,
+      "macro_f1": 0.322,
+      "train_time_s": 12.3928,
+      "params": NaN,
+      "f1_angry": 0.0833,
+      "f1_happy": 0.4801,
+      "f1_relaxed": 0.2927,
+      "f1_sad": 0.4317
+    },
+    {
+      "model": "Linear SVM on HOG",
+      "accuracy": 0.3346,
+      "macro_f1": 0.3107,
+      "train_time_s": 76.6604,
+      "params": NaN,
+      "f1_angry": 0.1435,
+      "f1_happy": 0.3953,
+      "f1_relaxed": 0.3442,
+      "f1_sad": 0.3598
+    },
+    {
+      "model": "LogReg on pixels",
+      "accuracy": 0.2789,
+      "macro_f1": 0.2731,
+      "train_time_s": 74.6686,
+      "params": NaN,
+      "f1_angry": 0.211,
+      "f1_happy": 0.3102,
+      "f1_relaxed": 0.2731,
+      "f1_sad": 0.2983
+    },
+    {
+      "model": "k-NN on pixels",
+      "accuracy": 0.2937,
+      "macro_f1": 0.2624,
+      "train_time_s": 0.6198,
+      "params": NaN,
+      "f1_angry": 0.1654,
+      "f1_happy": 0.396,
+      "f1_relaxed": 0.2405,
+      "f1_sad": 0.2478
+    },
+    {
+      "model": "Dummy (lazy guesser)",
+      "accuracy": 0.3008,
+      "macro_f1": 0.1156,
+      "train_time_s": 0.0848,
+      "params": NaN,
+      "f1_angry": 0.0,
+      "f1_happy": 0.4625,
+      "f1_relaxed": 0.0,
+      "f1_sad": 0.0
+    }
+  ]
+}
