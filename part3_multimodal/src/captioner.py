@@ -63,17 +63,22 @@ T = {
         "happy": [("ki tkoul 'barra n7arjou'", "w ena deja 9odem el bab"), ("el weekend wsel", "w ena farhan barcha"),
                   ("ki n9oulou 'chkoun yheb makla?'", "ENA ENA ENA"), ("ma fi rasi chay", "ken el vibes"),
                   ("rba7t el loto?", "la, 3tawni 9at3a jben"),
-                  ("ma nejjemch nji lyoum, 3andi 3ors", "3ors chkoun? ... 3ors Ronaldo")],
+                  ("ma nejjemch nji lyoum, 3andi 3ors", "3ors chkoun? ... 3ors Ronaldo"),
+                  ("chnowa ra2yek fel stage fi juillet?", "ena:"),
+                  ("hani jey nrayyez b7dhek, t7eb njiblek 7aja?", "ey... kilo bordgen")],
         "angry": [("chkoun kla el kaskrout mte3i?!", "taw nwarrih chkoun ena"), ("9oltlek LA", "ma t3awedhech"),
                   ("ma tkallamnich taw", "ena mnarvez barcha"), ("el facteur rja3", "w ena mazelt ma nsitech"),
-                  ("ki y9oulou 'douch'", "ya khouya LA, LA")],
+                  ("ki y9oulou 'douch'", "ya khouya LA, LA"),
+                  ("ma ghir tbassem chwaya w ma tbayench", "behi n7awel... *ba3d 5 d9aye9*")],
         "relaxed": [("ya5i 3ich", "zéro stress, zéro mochkla"), ("ena w el canapé", "love story"),
                     ("el examen ghodwa?", "mouch mochkelti"), ("9a3ed mrayyah", "el donya tnajjem tostanna"),
                     ("ma 3andi ma na3mel", "w hedhi a7la 7aja"),
-                    ("ena ba3d ma t3arakt m3a el 7ouma lkol 3al 7ess", "bech nrayyez chwaya")],
+                    ("ena ba3d ma t3arakt m3a el 7ouma lkol 3al 7ess", "bech nrayyez chwaya"),
+                    ("ennes lkol bdet t7adher fel PFE", "dhamiri: normal, normal")],
         "sad": [("9alouli 'nerja3 taw'", "w ma rja3ouch"), ("nhar el ithnin", "ya rabbi 3lech"),
                 ("7atta 7ad ma 3tani 9at3a", "mel kaskrout"), ("el bol fergh", "w 9albi zeda"),
-                ("tlabt nal3eb", "9alouli 'ba3d'")],
+                ("tlabt nal3eb", "9alouli 'ba3d'"),
+                ("ennes lkol mchat lel b7ar", "w ena 9a3ed nestanna fel bab")],
         "uncertain": [("mich fehem ken {emo} walla {other}", "el AI mte3na 7ayer zeda"),
                       ("{emo}? {other}?", "7atta ena ma na3rafch"),
                       ("wejhi ki y9oulou 'chbik?'", "{emo}... ama chwaya {other}")],
@@ -84,13 +89,16 @@ T = {
     "english": {
         "happy": [("when you say 'walk'", "and i'm already at the door"), ("weekend finally here", "best day of my life"),
                   ("when the treat bag opens", "pure happiness"), ("no thoughts", "just vibes"),
-                  ("did i win the lottery?", "no, someone dropped cheese")],
+                  ("did i win the lottery?", "no, someone dropped cheese"),
+                  ("what do you think about an internship in july?", "me:")],
         "angry": [("who ate my sandwich", "i will find you"), ("i said no", "don't ask again"),
                   ("the mailman came back", "this means war"), ("bath time?", "absolutely not"),
-                  ("don't talk to me", "before my breakfast")],
+                  ("don't talk to me", "before my breakfast"),
+                  ("them: just smile a little. me: ok, i'll try...", "*5 minutes later*")],
         "relaxed": [("exam tomorrow?", "not my problem"), ("me and the couch", "a love story"),
                     ("zero stress", "zero problems"), ("doing nothing", "and doing it well"),
-                    ("the world can wait", "i'm resting")],
+                    ("the world can wait", "i'm resting"),
+                    ("everyone: already working on their final project", "my conscience: normal, normal")],
         "sad": [("they said 'be right back'", "it's been 5 minutes"), ("monday again", "why"),
                 ("nobody shared the sandwich", "not even a crumb"), ("empty bowl", "empty heart"),
                 ("i asked to play", "they said 'later'")],
@@ -103,13 +111,16 @@ T = {
     "french": {
         "happy": [("quand tu dis 'promenade'", "j'étais déjà devant la porte"), ("enfin le week-end", "meilleur jour de ma vie"),
                   ("quand le paquet de friandises s'ouvre", "bonheur total"), ("aucune pensée", "que des good vibes"),
-                  ("j'ai gagné au loto ?", "non, quelqu'un a fait tomber du fromage")],
+                  ("j'ai gagné au loto ?", "non, quelqu'un a fait tomber du fromage"),
+                  ("ton avis sur un stage en juillet ?", "moi :")],
         "angry": [("qui a mangé mon sandwich", "je vais te trouver"), ("j'ai dit non", "ne redemande pas"),
                   ("le facteur est revenu", "c'est la guerre"), ("l'heure du bain ?", "hors de question"),
-                  ("ne me parle pas", "avant mon petit-déj")],
+                  ("ne me parle pas", "avant mon petit-déj"),
+                  ("eux : souris un peu. moi : ok, j'essaie...", "*5 minutes plus tard*")],
         "relaxed": [("examen demain ?", "pas mon problème"), ("moi et le canapé", "une histoire d'amour"),
                     ("zéro stress", "zéro problème"), ("ne rien faire", "et le faire bien"),
-                    ("le monde peut attendre", "je me repose")],
+                    ("le monde peut attendre", "je me repose"),
+                    ("tout le monde : déjà sur son PFE", "ma conscience : normal, normal")],
         "sad": [("ils ont dit 'je reviens'", "ça fait 5 minutes"), ("encore lundi", "pourquoi"),
                 ("personne n'a partagé le sandwich", "pas même une miette"), ("gamelle vide", "cœur vide"),
                 ("j'ai demandé à jouer", "ils ont dit 'plus tard'")],
@@ -155,6 +166,13 @@ IDEA_TEMPLATES = {
     },
 }
 
+# "Reaction" structure from the owner's Tunisian references: a question, then "Me:" and the dog's face answers.
+for _lang, (_q, _me) in {"english": ("what do you think about {idea}?", "Me:"),
+                         "french": ("ton avis sur {idea} ?", "Moi :"),
+                         "darija": ("chnowa ra2yek f {idea}?", "Ena:")}.items():
+    for _rows in IDEA_TEMPLATES[_lang].values():
+        _rows.append((_q, _me, "bar"))
+
 LANG_RULES = {
     "darija": ("Tunisian Arabic (Tounsi / Derja) written in Latin script with Arabizi digits (3=ع, 7=ح, 9=ق, 5=خ). "
                "Use Tunisian words such as barcha, taw, chnowa, kifech, 3lech, mouch, yezzi, behi, mte3, chbik, ya5i, "
@@ -183,6 +201,19 @@ FORMATS = {
                                        "bottom: 'Me: <the dog's reply, matching the emotion>' (Tounsi 'Ena:', French 'Moi :')"},
     "me_after": {"style": "classic", "how": "top: 'Me after <an exhausting or absurd effort>' (Tounsi 'Ena ba3d ma ...', "
                                              "French 'Moi après ...'); bottom: a short ironic punchline about why, or empty"},
+    # The next four come from Tunisian memes collected by the owner (2026-11-27): the photo IS the punchline.
+    "reaction": {"style": "bar", "how": "top: a question asking for an opinion on a relatable situation (Tounsi "
+                                        "'chnowa ra2yek f ...?', French 'ton avis sur ... ?'); bottom: exactly 'Me:' "
+                                        "(Tounsi 'Ena:', French 'Moi :') and nothing else: the dog's face is the answer"},
+    "everyone_vs_me": {"style": "bar", "how": "top: 'Everyone: <doing the serious, responsible thing>' (Tounsi "
+                                              "'Ennes lkol:', French 'Tout le monde :'); bottom: 'My <conscience / "
+                                              "stomach / brain>: <a reaction matching the emotion>'"},
+    "five_min_later": {"style": "bar", "how": "top: someone asks the dog to behave or smile and the dog says it will try "
+                                              "(Tounsi '... / behi n7awel...', French '... / ok, j'essaie...'); bottom: "
+                                              "exactly '*5 minutes later*' (Tounsi '*ba3d 5 d9aye9*', French "
+                                              "'*5 minutes plus tard*'): the face shows how it went"},
+    "absurd_answer": {"style": "bar", "how": "top: a normal question or offer someone makes; bottom: a short, totally "
+                                             "unexpected answer (a food, a random object) delivered with this emotion"},
     "me_also_me": {"style": "bar", "how": "top: 'Me: <a good resolution>' (Tounsi 'Ena:', French 'Moi :'); "
                                           "bottom: 'Also me: <breaking it 5 minutes later>' (Tounsi 'Ena zeda:', French 'Moi aussi :')"},
 }
@@ -206,14 +237,20 @@ Rules:
 # A caption matching any pattern is discarded (→ next provider → templates); the user's own idea is checked too.
 # Patterns are matched on the lower-cased, accent-stripped text AND on a copy with repeated letters collapsed
 # ("zebbbi" → "zebi", "kouuss" → "kous"), so they are written with single letters. Word-boundary match.
-_BLOCKLIST = [
-    # Tunisian / Maghrebi Arabizi: vulgarity
-    "ko?u?s", "ze?bi?", "zebour", "zab", "nik", "nik(?:om|omk|ek|tek|ni|ou)", "n[iy]a?yek", "nayek", "mnayek", "manyouk", "nayk[a-z]*",
-    "9a7?h?ba", "ka7?h?ba", "9a7b[a-z]*", "zok[a-z]*", "tabo?un", "sorm", "terma", "zamel", "zemla", "mibo?u?n",
-    "3asba", "3tay", "3atay", "khra", "5ra", "bzoula", "9lewi", "9lawi", "zoub",
-    # Tunisian: insults and name-calling
+# Arabizi glues little words to the front ("l3asba", "el3asba", "ya7mar", "w zebi"), so Tounsi patterns also match
+# with one of those prefixes attached.
+_TOUNSI_PREFIX = r"(?:ya|el|wel|bel|fel|w|b|l|f)?"
+_TOUNSI = [
+    # vulgarity
+    "ko?u?s", "ze?bi?", "zebour", "zab", "nik", "nik(?:om|omk|ek|tek|ni|ou)", "n[iy]a?yek", "nayek", "mnayek", "manyouk",
+    "nayk[a-z]*", "9a7?h?ba", "ka7?h?ba", "9a7b[a-z]*", "zok", "zokom[a-z]*", "zokek", "tabo?un", "sorm", "terma",
+    "zamel", "zemla", "mibo?u?n", "3a?sb(?:a|et|ti|tek|tkom|ou)?", "3tay", "3atay", "khra", "5ra", "bzoula", "9lewi",
+    "9lawi", "zoub",
+    # insults and name-calling
     "7mar", "hmar", "bhim[a-z]*", "msa5", "wsa5", "ghbi", "mtakhlef", "mahbou?l", "ta7an", "9awed",
     "om+e?k", "yem+e?k", "yom+e?k", "bouk", "yel3an[a-z]*", "l3an", "tfo?u", "wled el 7ram", "bent el 7ram",
+]
+_BLOCKLIST = [_TOUNSI_PREFIX + "(?:" + "|".join(_TOUNSI) + ")"] + [
     # English
     "fuck[a-z]*", "f+u+c+k", "shit[a-z]*", "bitch[a-z]*", "dick[a-z]*", "pussy", "ass", "ashole", "asshole", "bastard[a-z]*",
     "slut[a-z]*", "whore[a-z]*", "cunt", "cock", "piss[a-z]*", "crap[a-z]*", "damn[a-z]*", "hell", "wtf", "stfu", "shut up",

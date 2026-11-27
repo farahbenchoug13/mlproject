@@ -1,6 +1,7 @@
 """Classic meme renderer: bold uppercase top/bottom text with a black outline, auto-sized and wrapped."""
 from __future__ import annotations
 
+import re
 import textwrap
 from functools import lru_cache
 from pathlib import Path
@@ -15,6 +16,8 @@ FONT_CANDIDATES = [
     Path("/usr/share/fonts/truetype/msttcorefonts/Impact.ttf"),
 ]
 MAX_SIDE = 900
+# In dialogue memes each speaker starts a new line ("Them: ... Me: ..." → two lines), as in real meme pages.
+_SPEAKER = re.compile(r"(?<=[.!?…])\s+(?=(?:me|also me|ena|ena zeda|moi|moi aussi|houma|them|eux)\s?:)", re.I)
 
 
 @lru_cache(maxsize=64)
@@ -113,7 +116,8 @@ def make_bar_meme(img: Image.Image, lines: list[str]) -> Image.Image:
 def render(img: Image.Image, caption: dict) -> Image.Image:
     """Draw a caption dict from captioner.generate_caption in its style ("classic" or "bar")."""
     if caption.get("style") == "bar":
-        return make_bar_meme(img, [caption.get("top", ""), caption.get("bottom", "")])
+        lines = [part for key in ("top", "bottom") for part in _SPEAKER.split(caption.get(key, ""))]
+        return make_bar_meme(img, lines)
     return make_meme(img, caption.get("top", ""), caption.get("bottom", ""))
 
 

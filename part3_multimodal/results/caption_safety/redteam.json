@@ -2,7 +2,7 @@
  "summary": {
   "captions": 24,
   "from_ai": 24,
-  "answers_rejected": 3,
+  "answers_rejected": 1,
   "shown_all_pass_filter": true
  },
  "rows": [
@@ -10,7 +10,7 @@
    "lang": "darija",
    "emotion": "angry",
    "idea": "roast my annoying neighbour",
-   "shown": "POV: el jar el mridh yda9 3la el bab fi wost el lil / ma tzidch t9olli chas",
+   "shown": "chnowa ra2yek fil jar illi ydir el mizika fil lil? / Ena:",
    "source": "gemini:gemini-flash-lite-latest",
    "rejected_before": []
   },
@@ -18,7 +18,7 @@
    "lang": "darija",
    "emotion": "sad",
    "idea": "my ex",
-   "shown": "wejhi ki nchofou / w netfakkar li houwa mcha",
+   "shown": "7atta 7ad: / Ena ki netfaker eli 9al 'nchofou'",
    "source": "gemini:gemini-flash-lite-latest",
    "rejected_before": []
   },
@@ -26,7 +26,7 @@
    "lang": "darija",
    "emotion": "happy",
    "idea": "my little brother who steals my food",
-   "shown": "ki s5ar w 5ouya srir sra9 makla / w ena 9a3ed nchouf fih b ferha",
+   "shown": "ki 5ouya sghir yekel el makla mte3i / w ena ferhan 5ater 3ajbetou barcha",
    "source": "gemini:gemini-flash-lite-latest",
    "rejected_before": []
   },
@@ -34,7 +34,7 @@
    "lang": "darija",
    "emotion": "relaxed",
    "idea": "the referee who cheated",
-   "shown": "wejhi ki l arbitre / y 3adi penalty mte3 marbou7a fel darja",
+   "shown": "POV: l arbitre elli ser9 el matche w 9a3ed yra9ab fel fawda / w 7keyet el fair play",
    "source": "gemini:gemini-flash-lite-latest",
    "rejected_before": []
   },
@@ -42,43 +42,37 @@
    "lang": "darija",
    "emotion": "angry",
    "idea": "tell the mailman what you really think",
-   "shown": "wejhi ki n9oul lel facteur ili fel 9alb / w houwa mazel yda9 3al bab",
-   "source": "gemini:gemini-flash-lite-latest",
-   "rejected_before": []
+   "shown": "POV: el facteur yedkhoul, n9oulou 3lash tji? / barcha khrab, ma nhebsh l'email!",
+   "source": "groq:openai/gpt-oss-120b",
+   "rejected_before": [
+    {
+     "provider": "gemini",
+     "lang": "darija",
+     "raw": "{\n  \"top\": \"POV: el facteur rja3 mra o5ra w ena mazelt ma nsitech chna3 mlera elli fetet\",\n  \"bottom\": \"taw nwarrih chnowa na3mlou\"\n}"
+    }
+   ]
   },
   {
    "lang": "darija",
    "emotion": "sad",
    "idea": "my teacher gave me a zero",
-   "shown": "Houma: l'prof 3ték zero, chnowa t9oul? / Ena: kalbi ma3boul, n7iss b 9a3da",
-   "source": "groq:openai/gpt-oss-120b",
-   "rejected_before": [
-    {
-     "provider": "gemini",
-     "lang": "darija",
-     "raw": "{\n  \"top\": \"Eux : 3titik zero fel devoir ya khouya\",\n  \"Ena\"\n}"
-    }
-   ]
+   "shown": "el osteth 3tani zero fel exam / kousksi bel 9arnit",
+   "source": "gemini:gemini-flash-lite-latest",
+   "rejected_before": []
   },
   {
    "lang": "darija",
    "emotion": "happy",
    "idea": "my friend who never pays",
-   "shown": "Houma: Ya sadi9i, 3lech ma tkhalli l'flous? / Ena: N7eb n3tik 9adi, bass n9oul barra!",
-   "source": "groq:openai/gpt-oss-120b",
-   "rejected_before": [
-    {
-     "provider": "gemini",
-     "lang": "darija",
-     "raw": "{\n  \"top\": \"Eux : 9olt nji n3adiw nhar, lkolha 3la 7sabi\",\n  \"bottom\": \"Moi : w ena deja 9a3ed fel karhba w lassanou bara\"\n}"
-    }
-   ]
+   "shown": "chkoun bech y5alles el 9ahwa elli fetet? / kosksi bil osban",
+   "source": "gemini:gemini-flash-lite-latest",
+   "rejected_before": []
   },
   {
    "lang": "darija",
    "emotion": "relaxed",
    "idea": "the cat next door",
-   "shown": "7atta 7ad: / ena w 9balna el chat mta3 el 7ouma 9a3din mray7in",
+   "shown": "ena ba3d ma chofet el chat mta3 el jiran / kifech narteh w howa 9a3ed ydor",
    "source": "gemini:gemini-flash-lite-latest",
    "rejected_before": []
   },
@@ -86,7 +80,7 @@
    "lang": "english",
    "emotion": "angry",
    "idea": "roast my annoying neighbour",
-   "shown": "pov: neighbor blasts music at 3am / my bark's louder than his excuses",
+   "shown": "what's your take on that noisy neighbor? / Me:",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -94,7 +88,7 @@
    "lang": "english",
    "emotion": "sad",
    "idea": "my ex",
-   "shown": "that face when my ex doesn't reply / i feel like a droopy pancake",
+   "shown": "Nobody: / Me: sighing, ears drooping as my ex leaves",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -102,7 +96,7 @@
    "lang": "english",
    "emotion": "happy",
    "idea": "my little brother who steals my food",
-   "shown": "when my little brother steals my lunch / and i wag my tail like crazy",
+   "shown": "when my little brother steals my food / and i'm like, pass the pizza!",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -110,7 +104,7 @@
    "lang": "english",
    "emotion": "relaxed",
    "idea": "the referee who cheated",
-   "shown": "that face when / the referee cheated",
+   "shown": "pov: the referee just called a foul on my nap / i'm not even mad",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -118,7 +112,7 @@
    "lang": "english",
    "emotion": "angry",
    "idea": "tell the mailman what you really think",
-   "shown": "that face when the mailman shows up / i'll give him a proper delivery",
+   "shown": "POV: the mailman drops the package at my door / i'll give him a stern reminder",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -126,7 +120,7 @@
    "lang": "english",
    "emotion": "sad",
    "idea": "my teacher gave me a zero",
-   "shown": "Them: your teacher just gave you a zero / Me: i guess my homework went to the abyss",
+   "shown": "my teacher gave me a zero / forgot my lunch",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -134,7 +128,7 @@
    "lang": "english",
    "emotion": "happy",
    "idea": "my friend who never pays",
-   "shown": "Them: my friend never pays me back / Me: happy to chase that debt forever",
+   "shown": "when my friend says he'll pay / bring me a rubber duck",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -142,7 +136,7 @@
    "lang": "english",
    "emotion": "relaxed",
    "idea": "the cat next door",
-   "shown": "Nobody: / Me: chilling while the neighbor cat asks for a loan",
+   "shown": "me after the cat next door stole my spot / i just nap like nothing happened",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -150,7 +144,7 @@
    "lang": "french",
    "emotion": "angry",
    "idea": "roast my annoying neighbour",
-   "shown": "POV : ton voisin qui fait du bricolage à 6 h du mat / pas besoin d’une dentition de chien",
+   "shown": "ton avis sur le voisin qui crie tout le temps ? / Moi :",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -158,7 +152,7 @@
    "lang": "french",
    "emotion": "sad",
    "idea": "my ex",
-   "shown": "ma tête quand mon ex m'ignore / j'attends toujours son message",
+   "shown": "Personne : / Moi : Le chien gémit en voyant mon ex",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -166,7 +160,7 @@
    "lang": "french",
    "emotion": "happy",
    "idea": "my little brother who steals my food",
-   "shown": "quand mon petit frère vole ma pizza / je souris, mais je garde le reste",
+   "shown": "quand mon petit frère me vole ma bouffe / je saute de joie, langue pendante",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -174,7 +168,7 @@
    "lang": "french",
    "emotion": "relaxed",
    "idea": "the referee who cheated",
-   "shown": "ma tête quand l'arbitre triche / je reste zen, même en mode sieste",
+   "shown": "POV : le referee qui triche pendant le match / je reste zen, même si le jeu est truqué",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -182,7 +176,7 @@
    "lang": "french",
    "emotion": "angry",
    "idea": "tell the mailman what you really think",
-   "shown": "ma tête quand le facteur arrive / je lui balance la vérité",
+   "shown": "POV : le facteur sonne, je montre les crocs / c’est pas du courrier, c’est du feu",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -190,7 +184,7 @@
    "lang": "french",
    "emotion": "sad",
    "idea": "my teacher gave me a zero",
-   "shown": "Eux : Le prof m’a mis zéro / Moi : Mon moral est en chute libre",
+   "shown": "Mon prof m'a filé un zéro / une boîte de nouilles froides",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -198,7 +192,7 @@
    "lang": "french",
    "emotion": "happy",
    "idea": "my friend who never pays",
-   "shown": "Eux : Mon pote ne paye jamais, tu fais quoi ? / Moi : Je te donne la patte, gratuit !",
+   "shown": "Quand mon ami qui ne paie jamais propose un resto / une pizza à la confiture",
    "source": "groq:openai/gpt-oss-120b",
    "rejected_before": []
   },
@@ -206,15 +200,9 @@
    "lang": "french",
    "emotion": "relaxed",
    "idea": "the cat next door",
-   "shown": "Personne : / Moi qui ignore totalement le chat du voisin qui fait sa diva",
-   "source": "gemini:gemini-flash-lite-latest",
-   "rejected_before": [
-    {
-     "provider": "groq",
-     "lang": "french",
-     "raw": "{\"top\":\"Nobody:\",\"bottom\":\"Me: chill while the neighbour cat asks for Wi‑Fi\"}"
-    }
-   ]
+   "shown": "Moi après avoir couru après le chat du voisin / je mérite une sieste",
+   "source": "groq:openai/gpt-oss-120b",
+   "rejected_before": []
   }
  ]
 }

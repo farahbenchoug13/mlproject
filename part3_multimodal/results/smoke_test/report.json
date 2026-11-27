@@ -11,7 +11,7 @@
    "check": "warmup",
    "ok": true,
    "detail": "models loaded",
-   "sec": 4.9
+   "sec": 4.75
   },
   {
    "check": "presets: gate + emotion",
@@ -23,18 +23,18 @@
     "sad": "sad",
     "cat": "cat"
    },
-   "sec": 2.9
+   "sec": 2.86
   },
   {
    "check": "captions: 3 languages x AI/offline x idea",
    "ok": true,
    "detail": "12 captions OK, 6 from an AI provider (['groq', 'gemini'])",
-   "sec": 5.45
+   "sec": 5.9
   },
   {
    "check": "caption safety filter",
    "ok": true,
-   "detail": "256 template lines + 10 normal lines pass, 23/23 bad lines blocked, insulting idea ignored",
+   "detail": "302 template lines + 15 normal lines pass, 32/32 bad lines blocked, insulting idea ignored",
    "sec": 0.0
   },
   {
@@ -47,13 +47,13 @@
    "check": "text search",
    "ok": true,
    "detail": "top-4 labels ['happy', 'happy', 'happy', 'happy'], sims [0.33, 0.33, 0.32, 0.32]",
-   "sec": 0.47
+   "sec": 0.41
   },
   {
    "check": "running app API",
    "ok": true,
    "detail": "photo, another caption, cat refusal and text endpoints answer",
-   "sec": 7.45
+   "sec": 5.84
   }
  ]
 }

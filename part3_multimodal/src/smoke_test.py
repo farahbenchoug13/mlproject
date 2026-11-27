@@ -86,9 +86,12 @@ def captions():
 BAD = ["ya 7mar chbik", "ya zebi 3lik", "kouuuss omek", "nayek el jar", "9a7ba", "ya bhim", "ya wled el 7ram",
        "this is so f***ing good", "you idiot", "shut up human", "what the hell", "stupid mailman", "your mom",
        "ta gueule", "quel connard", "putain de lundi", "espèce d'abruti", "c'est de la merde", "ferme-la",
-       "zebbbi", "f u c k", "sh!t happens", "Débile"]
+       "zebbbi", "f u c k", "sh!t happens", "Débile",
+       # reported by the owner (2026-11-27): "3asba" + the ways Arabizi glues or conjugates it
+       "3asba", "3ASBAAA", "l3asba", "el3asba", "w el 3asba", "3asbet", "3sba", "ya7mar", "wzebi"]
 GOOD = ["el kalb mte3i yheb el makla", "klab el 7ouma lkol", "nike shoes", "ice cream cone", "hello human",
-        "il fait la gueule", "kousksi nhar el a7ad", "class is over", "beef jerky time", "7el el bab"]
+        "il fait la gueule", "kousksi nhar el a7ad", "class is over", "beef jerky time", "7el el bab",
+        "ena 3sabi ta3bou", "kalb 3asabi", "khobz w zebda", "zokra w bendir", "kas te"]
 
 
 def caption_safety():
