@@ -1,0 +1,14 @@
+{
+ "darija": {
+  "gemini": 10,
+  "groq": 2
+ },
+ "english": {
+  "groq": 12
+ },
+ "french": {
+  "groq": 7,
+  "gemini": 4,
+  "template": 1
+ }
+}
