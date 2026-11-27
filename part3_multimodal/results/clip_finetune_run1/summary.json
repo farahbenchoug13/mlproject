@@ -1,0 +1,106 @@
+{
+ "config": {
+  "CLIP_ARCH": "ViT-B-16",
+  "CLIP_PRETRAINED": "openai",
+  "SEED": 42,
+  "EPOCHS": 8,
+  "BATCH": 64,
+  "LR_BACKBONE": 1e-05,
+  "LR_HEAD": 0.0005,
+  "WEIGHT_DECAY": 0.1,
+  "LABEL_SMOOTH": 0.1,
+  "USE_CLASS_WEIGHTS": true,
+  "BALANCED_SAMPLER": false,
+  "STRONG_AUG": false,
+  "TEST": false
+ },
+ "decisions_on_val": {
+  "prompt_set": "simple",
+  "linear_probe_C": 3.0,
+  "wise_alpha": 0.5,
+  "tta": false
+ },
+ "device": "cuda",
+ "results_test": [
+  {
+   "model": "Dummy (Part 2)",
+   "family": "baseline",
+   "macro_f1": 0.119,
+   "accuracy": 0.313,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "ResNet-50 frozen + LogReg (Part 2)",
+   "family": "frozen features",
+   "macro_f1": 0.414,
+   "accuracy": 0.44,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "ResNet-50 fine-tuned (Part 2)",
+   "family": "fine-tuned",
+   "macro_f1": 0.558,
+   "accuracy": 0.579,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "ViT-B/16 fine-tuned (Part 2)",
+   "family": "fine-tuned",
+   "macro_f1": 0.567,
+   "accuracy": 0.59,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "CLIP ViT-B-16 zero-shot (simple prompts)",
+   "family": "zero-shot",
+   "macro_f1": 0.5379272285028591,
+   "accuracy": 0.5599194360523666,
+   "f1_angry": 0.4227212681638045,
+   "f1_happy": 0.6791489361702128,
+   "f1_relaxed": 0.445,
+   "f1_sad": 0.6048387096774194
+  },
+  {
+   "model": "CLIP ViT-B-16 frozen + LogReg (C=3.0)",
+   "family": "frozen features",
+   "macro_f1": 0.5960421894731825,
+   "accuracy": 0.6112789526686808,
+   "f1_angry": 0.5104333868378812,
+   "f1_happy": 0.6852917009038619,
+   "f1_relaxed": 0.5386178861788617,
+   "f1_sad": 0.6498257839721254
+  },
+  {
+   "model": "CLIP ViT-B-16 fine-tuned",
+   "family": "fine-tuned",
+   "macro_f1": 0.5942196353274394,
+   "accuracy": 0.6163141993957704,
+   "f1_angry": 0.4780701754385965,
+   "f1_happy": 0.6746602717825739,
+   "f1_relaxed": 0.5734388742304309,
+   "f1_sad": 0.650709219858156
+  },
+  {
+   "model": "CLIP ViT-B-16 fine-tuned + WiSE-FT \u03b1=0.5",
+   "family": "fine-tuned",
+   "macro_f1": 0.6321198970402514,
+   "accuracy": 0.648539778449144,
+   "f1_angry": 0.5536062378167641,
+   "f1_happy": 0.723336006415397,
+   "f1_relaxed": 0.5774378585086042,
+   "f1_sad": 0.6740994854202401
+  }
+ ]
+}

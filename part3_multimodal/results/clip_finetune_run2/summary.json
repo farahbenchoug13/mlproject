@@ -1,0 +1,130 @@
+{
+ "config": {
+  "CLIP_ARCH": "ViT-B-16-quickgelu",
+  "CLIP_PRETRAINED": "openai",
+  "SEED": 42,
+  "EPOCHS": 8,
+  "BATCH": 64,
+  "LR_BACKBONE": 1e-05,
+  "LR_HEAD": 0.0005,
+  "WEIGHT_DECAY": 0.1,
+  "LABEL_SMOOTH": 0.1,
+  "USE_CLASS_WEIGHTS": true,
+  "BALANCED_SAMPLER": false,
+  "STRONG_AUG": false,
+  "TEST": false
+ },
+ "decisions_on_val": {
+  "prompt_set": "simple",
+  "linear_probe_C": 3.0,
+  "wise_alpha": 0.75,
+  "tta": true,
+  "keep_recovered_data": true
+ },
+ "exported_model": "clean train + recovered",
+ "device": "cuda",
+ "results_test": [
+  {
+   "model": "Dummy (Part 2)",
+   "family": "baseline",
+   "macro_f1": 0.119,
+   "accuracy": 0.313,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "ResNet-50 frozen + LogReg (Part 2)",
+   "family": "frozen features",
+   "macro_f1": 0.414,
+   "accuracy": 0.44,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "ResNet-50 fine-tuned (Part 2, clean rerun)",
+   "family": "fine-tuned",
+   "macro_f1": 0.556,
+   "accuracy": 0.572,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "ViT-B/16 fine-tuned (Part 2, clean rerun)",
+   "family": "fine-tuned",
+   "macro_f1": 0.576,
+   "accuracy": 0.593,
+   "f1_angry": NaN,
+   "f1_happy": NaN,
+   "f1_relaxed": NaN,
+   "f1_sad": NaN
+  },
+  {
+   "model": "CLIP ViT-B-16-quickgelu zero-shot (simple prompts)",
+   "family": "zero-shot",
+   "macro_f1": 0.570047115722812,
+   "accuracy": 0.5926485397784491,
+   "f1_angry": 0.46885245901639344,
+   "f1_happy": 0.699122106943336,
+   "f1_relaxed": 0.4868995633187773,
+   "f1_sad": 0.625314333612741
+  },
+  {
+   "model": "CLIP ViT-B-16-quickgelu frozen + LogReg (C=3.0)",
+   "family": "frozen features",
+   "macro_f1": 0.5911020515861843,
+   "accuracy": 0.6092648539778449,
+   "f1_angry": 0.48089171974522293,
+   "f1_happy": 0.693069306930693,
+   "f1_relaxed": 0.5417515274949084,
+   "f1_sad": 0.648695652173913
+  },
+  {
+   "model": "CLIP ViT-B-16-quickgelu fine-tuned",
+   "family": "fine-tuned",
+   "macro_f1": 0.5879059670438481,
+   "accuracy": 0.6168177240684793,
+   "f1_angry": 0.46540880503144655,
+   "f1_happy": 0.6979768786127167,
+   "f1_relaxed": 0.5473251028806584,
+   "f1_sad": 0.6409130816505707
+  },
+  {
+   "model": "CLIP ViT-B-16-quickgelu fine-tuned + WiSE-FT a=0.75 + TTA",
+   "family": "fine-tuned",
+   "macro_f1": 0.596006943582792,
+   "accuracy": 0.6198388721047331,
+   "f1_angry": 0.4900398406374502,
+   "f1_happy": 0.6992481203007519,
+   "f1_relaxed": 0.5478348439073515,
+   "f1_sad": 0.6469049694856146
+  }
+ ],
+ "recovery_ablation": [
+  {
+   "train_set": "clean train (9266)",
+   "val_macro_f1": 0.6105161268718978,
+   "test_accuracy": 0.6198388721047331,
+   "test_macro_f1": 0.596006943582792,
+   "test_f1_angry": 0.4900398406374502,
+   "test_f1_happy": 0.6992481203007519,
+   "test_f1_relaxed": 0.5478348439073515,
+   "test_f1_sad": 0.6469049694856146
+  },
+  {
+   "train_set": "clean train + recovered (10524)",
+   "val_macro_f1": 0.6204309385664104,
+   "test_accuracy": 0.6404833836858006,
+   "test_macro_f1": 0.6216871471410255,
+   "test_f1_angry": 0.5241635687732342,
+   "test_f1_happy": 0.7210231814548361,
+   "test_f1_relaxed": 0.5772200772200772,
+   "test_f1_sad": 0.6643417611159547
+  }
+ ]
+}

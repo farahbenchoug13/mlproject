@@ -1,0 +1,124 @@
+{
+ "simple": {
+  "angry": [
+   "a photo of a angry dog."
+  ],
+  "happy": [
+   "a photo of a happy dog."
+  ],
+  "relaxed": [
+   "a photo of a relaxed dog."
+  ],
+  "sad": [
+   "a photo of a sad dog."
+  ]
+ },
+ "body_language": {
+  "angry": [
+   "a photo of an angry aggressive dog baring its teeth, snarling, with ears pinned back and a tense body.",
+   "a photo of a growling dog with wrinkled muzzle, showing teeth, hard stare."
+  ],
+  "happy": [
+   "a photo of a happy excited dog smiling with an open relaxed mouth, tongue out and bright eyes.",
+   "a photo of a playful joyful dog with a wagging tail and a loose bouncy posture."
+  ],
+  "relaxed": [
+   "a photo of a calm relaxed dog resting comfortably with soft eyes and a loose body.",
+   "a photo of a content dog lying down peacefully, closed mouth, neutral ears."
+  ],
+  "sad": [
+   "a photo of a sad worried dog with drooping ears, downcast eyes and a low slumped posture.",
+   "a photo of a lonely dog with puppy eyes looking up, head down, tail tucked."
+  ]
+ },
+ "ensemble": {
+  "angry": [
+   "a photo of a angry dog.",
+   "a photo of a aggressive dog.",
+   "a photo of a snarling dog.",
+   "a close-up photo of a angry dog.",
+   "a close-up photo of a aggressive dog.",
+   "a close-up photo of a snarling dog.",
+   "a cropped photo of the angry dog.",
+   "a cropped photo of the aggressive dog.",
+   "a cropped photo of the snarling dog.",
+   "a photo of a angry puppy.",
+   "a photo of a aggressive puppy.",
+   "a photo of a snarling puppy.",
+   "a good photo of a angry dog.",
+   "a good photo of a aggressive dog.",
+   "a good photo of a snarling dog.",
+   "a low resolution photo of a angry dog.",
+   "a low resolution photo of a aggressive dog.",
+   "a low resolution photo of a snarling dog.",
+   "a photo of an angry aggressive dog baring its teeth, snarling, with ears pinned back and a tense body.",
+   "a photo of a growling dog with wrinkled muzzle, showing teeth, hard stare."
+  ],
+  "happy": [
+   "a photo of a happy dog.",
+   "a photo of a excited dog.",
+   "a photo of a playful dog.",
+   "a close-up photo of a happy dog.",
+   "a close-up photo of a excited dog.",
+   "a close-up photo of a playful dog.",
+   "a cropped photo of the happy dog.",
+   "a cropped photo of the excited dog.",
+   "a cropped photo of the playful dog.",
+   "a photo of a happy puppy.",
+   "a photo of a excited puppy.",
+   "a photo of a playful puppy.",
+   "a good photo of a happy dog.",
+   "a good photo of a excited dog.",
+   "a good photo of a playful dog.",
+   "a low resolution photo of a happy dog.",
+   "a low resolution photo of a excited dog.",
+   "a low resolution photo of a playful dog.",
+   "a photo of a happy excited dog smiling with an open relaxed mouth, tongue out and bright eyes.",
+   "a photo of a playful joyful dog with a wagging tail and a loose bouncy posture."
+  ],
+  "relaxed": [
+   "a photo of a relaxed dog.",
+   "a photo of a calm dog.",
+   "a photo of a content dog.",
+   "a close-up photo of a relaxed dog.",
+   "a close-up photo of a calm dog.",
+   "a close-up photo of a content dog.",
+   "a cropped photo of the relaxed dog.",
+   "a cropped photo of the calm dog.",
+   "a cropped photo of the content dog.",
+   "a photo of a relaxed puppy.",
+   "a photo of a calm puppy.",
+   "a photo of a content puppy.",
+   "a good photo of a relaxed dog.",
+   "a good photo of a calm dog.",
+   "a good photo of a content dog.",
+   "a low resolution photo of a relaxed dog.",
+   "a low resolution photo of a calm dog.",
+   "a low resolution photo of a content dog.",
+   "a photo of a calm relaxed dog resting comfortably with soft eyes and a loose body.",
+   "a photo of a content dog lying down peacefully, closed mouth, neutral ears."
+  ],
+  "sad": [
+   "a photo of a sad dog.",
+   "a photo of a depressed dog.",
+   "a photo of a lonely dog.",
+   "a close-up photo of a sad dog.",
+   "a close-up photo of a depressed dog.",
+   "a close-up photo of a lonely dog.",
+   "a cropped photo of the sad dog.",
+   "a cropped photo of the depressed dog.",
+   "a cropped photo of the lonely dog.",
+   "a photo of a sad puppy.",
+   "a photo of a depressed puppy.",
+   "a photo of a lonely puppy.",
+   "a good photo of a sad dog.",
+   "a good photo of a depressed dog.",
+   "a good photo of a lonely dog.",
+   "a low resolution photo of a sad dog.",
+   "a low resolution photo of a depressed dog.",
+   "a low resolution photo of a lonely dog.",
+   "a photo of a sad worried dog with drooping ears, downcast eyes and a low slumped posture.",
+   "a photo of a lonely dog with puppy eyes looking up, head down, tail tucked."
+  ]
+ }
+}

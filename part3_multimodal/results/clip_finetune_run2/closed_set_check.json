@@ -1,0 +1,5 @@
+{
+ "rejected_images": 1453,
+ "rejected_flagged_not_dog": 0.1259463131427765,
+ "val_dogs_flagged_not_dog": 0.0025176233612000942
+}
