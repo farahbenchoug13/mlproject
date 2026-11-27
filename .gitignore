@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Secrets
+.env
+
+# Large Part 3 artifacts (checkpoints, CLIP embeddings) — share via Drive/Kaggle, not git
+part3_multimodal/artifacts/

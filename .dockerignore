@@ -1,0 +1,16 @@
+.git
+.vscode
+.venv
+**/__pycache__
+data/
+outputs/
+part2_models/
+layout_reference/
+part3_multimodal/artifacts/
+part3_multimodal/results/
+*.ipynb
+.env
+CLAUDE.md
+docs/
+README.md
+src/

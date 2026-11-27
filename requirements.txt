@@ -1,0 +1,15 @@
+# DogTranslator Part 3 — pipeline + app dependencies (Python 3.11).
+# torch/torchvision CPU wheels are installed separately in the Dockerfile
+# (pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision).
+timm>=1.0
+open_clip_torch>=2.24
+ultralytics>=8.2
+gradio>=6.0
+pillow>=10.0
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+openai>=1.40      # OpenAI-compatible client for free providers (Groq, Gemini, OpenRouter)
+python-dotenv>=1.0
+imagehash>=4.3

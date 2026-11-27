@@ -1,0 +1,32 @@
+services:
+  app:
+    build: .
+    image: dogtranslator:latest
+    shm_size: "2gb"     # PyTorch DataLoader workers need shared memory
+    ports:
+      - "7860:7860"
+    env_file:
+      - path: .env          # GROQ_API_KEY=... (optional: without it, captions use templates)
+        required: false
+    volumes:
+      - ./data/clean:/app/data/clean:ro                 # images for text→image search
+      - ./data/splits.csv:/app/data/splits.csv:ro
+      - ./part3_multimodal/artifacts:/app/part3_multimodal/artifacts   # ViT/CLIP weights, embeddings
+      - model-cache:/cache                              # HF/torch/YOLO downloads survive rebuilds
+
+  # One-off jobs on the same image, e.g.:
+  #   docker compose run --rm dev python part3_multimodal/src/build_index.py
+  dev:
+    image: dogtranslator:latest
+    profiles: ["dev"]
+    shm_size: "2gb"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - .:/app
+      - model-cache:/cache
+    command: ["bash"]
+
+volumes:
+  model-cache:
