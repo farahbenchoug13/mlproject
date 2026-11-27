@@ -1,0 +1,8 @@
+{
+ "angry": "data/clean/angry/471369737_916e1ca03e_b.jpg",
+ "happy": "data/clean/happy/6391963701_bc0280a0ef_b.jpg",
+ "relaxed": "data/clean/relaxed/345716959_0d77045af2_b.jpg",
+ "sad": "data/clean/sad/3555676003_1d10a9f68b_b.jpg",
+ "cat": "data/rejected/angry/9449206323_3a2d662906_b.jpg (a real cat from Part 1's rejects)",
+ "how_chosen": "Dog presets: test photos that the final CLIP model classifies correctly with >=0.95 confidence AND whose cues are visually obvious (picked by eye). They show the app working; they are NOT a measure of accuracy (see README)."
+}
