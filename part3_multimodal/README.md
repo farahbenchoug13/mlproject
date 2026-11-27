@@ -22,6 +22,7 @@ emotion → caption → meme, (3) a Gradio app, (4) measured evaluations of ever
 | Text → photo search | **P@10 = 0.75** for emotion queries vs 0.25 chance (test photos, simple queries) |
 | Part 1 audit | **1,258 of 1,706** photos YOLO dropped as "no dog" are dogs per CLIP (≈92% precision on a manual check) |
 | App reproduces the evaluation | same predicted emotion as the notebook on 200/200 test photos (max prob. difference 0.004) |
+| App validation | automated end-to-end test **8/8 passed** on the Docker app; caption safety 32/32 bad lines blocked, 24/24 clean captions under insult-baiting ideas; owner's manual tests passed (§5.4) |
 
 ---
 
@@ -144,6 +145,19 @@ mixed up with sad (calm postures), as in Parts 2 and 3. Labels are noisy, so tru
 ### 5.3 Speed (CPU, Docker, 8 threads)
 YOLO gate 0.1–0.5 s · emotion 0.2 s · template caption < 1 ms · LLM caption ~1 s (network) · search < 0.2 s (pre-computed index).
 
+### 5.4 End-to-end validation of the app
+- **Automated** (`src/smoke_test.py --app`, report in `results/smoke_test/`): model files present · models load · the 4
+  preset dogs get their emotion and the cat is refused · captions in 3 languages × AI/offline × with/without idea are
+  non-empty, safe and well-formed, offline captions vary · caption safety filter (32/32 bad lines blocked, 0 false
+  positives on 302 template lines + 15 look-alikes) · both meme styles render · text search · the running app's API
+  (photo, "Another caption", cat refusal, description). Result on the final Docker image: **ALL PASSED (8/8)**.
+- **Caption safety red-team** (`src/redteam_captions.py`, `results/caption_safety/`): 24 ideas that invite insults, 3
+  languages → 24 clean captions shown.
+- **Manual tests by the owner** (2026-11-27, photos not from the dataset): a dog wearing a cone → "That face when /
+  realizing I'm stuck behind bars"; ostriches → refused ("win el kalb? / ma l9it 7atta kalb houni"); a blurry phone photo
+  of a small dog with a Tounsi idea → dog found, angry 57% / sad 33%, the idea used in an "Everyone: / Me:" meme; a pug
+  with an idea → "7atta 7ad: / Ena: …". Light and dark themes checked in the browser.
+
 ---
 
 ## 6. Audit of Part 1's rejections — `src/audit_part1.py`
@@ -197,6 +211,8 @@ Model files (gitignored, too large) go in `part3_multimodal/artifacts/`: `clip_e
 - The LLM caption quality in Darija is judged informally; the Darija benchmark we rely on is a single vendor test.
 - Caption safety relies on a word list plus the prompt: an insult phrased with words not in the list can still pass.
   The template fallback (written by us) is always safe.
+- The LLMs' Tounsi is not perfect: manual tests showed occasional non-Tunisian forms ("ta3", "nalka" instead of
+  "mte3", "nal9a") or odd spellings ("Aná"). Readable, but a native speaker notices.
 
 ---
 

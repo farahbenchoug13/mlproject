@@ -2,7 +2,9 @@
 
 Team ML course project. Detect a dog's emotion (**angry / happy / relaxed / sad**) from a photo, then turn it into a **meme**.
 Part 1 (Farah) = data cleaning + YOLOv8 dog gate. Part 2 (Jamila) = 10-model emotion benchmark.
-**This branch = Part 3 (us): CLIP experiments + full pipeline integration + Gradio app.** Status: complete, validated, pushed.
+**This branch = Part 3 (us): CLIP experiments + full pipeline integration + Gradio app.**
+**Status: section CLOSED by the owner on 2026-11-27** — complete, validated (smoke test 8/8 + owner's manual tests),
+pushed to `origin/Multimodal`. Further work = only the open items below or a new request from the owner.
 
 Docs: `README.md` (project), `part2_models/README.md`, **`part3_multimodal/README.md` (Part 3 report — the source for every
 number)**, `docs/HANDOFF_MULTIMODAL.md` (original spec). Read them before big changes.
@@ -114,3 +116,6 @@ Models load once (module-level cache).
   `../clip_finetune_results*/` (copies of what is in `results/`); model `.pt` files exist only in `artifacts/`
   (gitignored) → keep a copy on Drive.
 - Optional, not evaluated: let CLIP also veto YOLO's acceptances (would target the 6.9% cats).
+- Darija quality: LLMs sometimes use non-Tunisian forms ("ta3", "nalka") or odd spellings ("Aná"); a possible fix is a
+  small post-edit map in `captioner.py` (only if the owner asks). Not unsafe, listed in the README limitations.
+- Pull request `Multimodal` → `main`: not opened; the owner decides when.

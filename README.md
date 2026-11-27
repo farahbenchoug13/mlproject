@@ -190,6 +190,9 @@ Same contract as Part 2 (`data/splits.csv`, decisions on val, test reported once
 - **Feedback for Part 1:** YOLO misses close-up dog faces; 1,258 of the 1,706 "no dog" rejects are dogs (≈92% precision on a
   manual check). Adding them to the *training* set only (val/test untouched) gave +2.6 macro F1 (p = 0.005). Part 1's data is unchanged.
 
+- **App validation:** automated end-to-end test 8/8 passed on the Docker app; AI captions go through a family-friendly
+  filter (Tounsi/English/French swear words and insults blocked, tested with insult-baiting ideas); manual tests by the team passed.
+
 **Run the app:** `docker compose up --build` → http://localhost:7860 (model files go in `part3_multimodal/artifacts/`, see the Part 3 README).
 
 ---
