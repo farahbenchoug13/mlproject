@@ -53,11 +53,12 @@ Must be **technically solid** (honest metrics) **and fun** (real meme formats, n
 - **Captions = free LLMs** via OpenAI-compatible APIs (`captioner.py`): Darija → Gemini `gemini-flash-lite-latest` first,
   EN/FR → Groq `openai/gpt-oss-120b` first, then the other, then OpenRouter `:free`, then the **template bank** (always
   works offline). Keys in `.env` (format: `.env.example`). The Claude API needs prepaid credits → not used.
-  Each meme gets a known meme format (when / that face when / Nobody / POV / Them-Me / Me after / Me-Also me); malformed answers
+  Each meme gets a known meme format (`FORMATS`: when / that face when / Nobody / POV / Them-Me / Me-Also me + five from
+  the owner's Tunisian references: me_after, reaction, everyone_vs_me, five_min_later, absurd_answer); malformed answers
   (empty line, > 14 words, wrong-language format words, Arabic script) are retried with the next provider.
 - **Caption safety (2026-11-27, owner request: Gemini produced an insult)**: strict family-friendly prompt + `_BLOCKLIST`
   (Tounsi Arabizi / EN / FR vulgarity and insults, matched after normalisation: accents, repeated letters, `f***`,
-  `f u c k`, `sh!t`) on every LLM line; an unsafe user idea is ignored and the app shows a notice. When the owner reports a
+  `f u c k`, `sh!t`; Tounsi words also with glued prefixes `l/el/w/b/f/ya`, e.g. `l3asba`) on every LLM line; an unsafe user idea is ignored and the app shows a notice. When the owner reports a
   new bad word, add it to `_BLOCKLIST` and to `BAD` in `smoke_test.py`; add legit look-alikes to `GOOD`.
 - **Languages**: Tunisian Darija (default, Latin script / Arabizi), English, French. Low confidence (top < 0.45 or
   top-2 margin < 0.10) → the caption jokes about the model hesitating.
@@ -105,8 +106,8 @@ Models load once (module-level cache).
 ## Open items
 - Tunisian meme references: owner collects them in `../tunisian_memes_references/` (`meme_text.md` + images, Arabic
   script). Use their **joke structure / wording** only (transliterate to Arabizi into `T["darija"]` or a new `FORMATS`
-  entry, check with `is_safe`); never ship the images (TV-series stills, real people). Done so far: memes 1–2 →
-  "me_after" format + 2 Darija tone examples (2026-11-27).
+  entry, check with `is_safe`); never ship the images (TV-series stills, real people). Done (2026-11-27): memes 1–6 →
+  5 formats + Darija tone examples (and EN/FR equivalents). Owner-reported bad word so far: "3asba" (blocked + variants).
 - Jamila should commit her clean re-run results herself before `../dogs part 2 jamila/` is deleted. The owner deleted
   `../clip_finetune_results*/` (copies of what is in `results/`); model `.pt` files exist only in `artifacts/`
   (gitignored) → keep a copy on Drive.

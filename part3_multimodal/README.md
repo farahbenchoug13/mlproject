@@ -90,14 +90,18 @@ photo + text ──► as photo, the text steers the caption
   Free providers tried in order (Groq → Gemini → OpenRouter), then a template bank. Tunisian Darija (Arabizi), English, French.
   When the model hesitates (top probability < 0.45 or top-2 margin < 0.10), the caption jokes about it.
   Each meme uses a known **meme format** ("when…", "that face when", "Nobody: / Me:", "POV:", "Them: / Me:",
-  "Me: / Also me:", "Me after…" — the last one taken from Tunisian memes the owner collected, "Ena ba3d ma…") drawn either as classic Impact text or as a modern white caption band; malformed or unsafe
+  "Me: / Also me:") plus five structures taken from six Tunisian memes the owner collected (only the joke structure;
+  the TV-series images are not used): "Me after…" ("Ena ba3d ma…"), a question + "Me:" where the dog's face is the answer
+  ("chnowa ra2yek f…? / Ena:"), "Everyone: … / My conscience: …", "OK I'll try… / *5 minutes later*", and the absurd answer drawn either as classic Impact text or as a modern white caption band; malformed or unsafe
   LLM output is rejected (→ next provider → templates). Darija: Gemini first; English/French: Groq first.
 - **Caption safety** (the app is shown in class): the prompt forbids swear words, insults, "your mother" jokes, innuendo,
   body shaming, politics and religion; because a prompt alone is not a guarantee (Gemini did slip an insult in a demo),
   every LLM line also goes through a **blocklist filter** (Tounsi Arabizi, English, French; matched after lower-casing,
-  removing accents, undoing tricks like `f***`, `f u c k`, `sh!t`, `zebbbi`) and Arabic-script output is refused.
-  A user idea containing a blocked word is ignored and the app says so. Checked by `smoke_test.py` (23/23 bad lines
-  blocked, 0 of 252 template lines and 10 normal lines such as "il fait la gueule" or "nike shoes" wrongly blocked)
+  removing accents, undoing tricks like `f***`, `f u c k`, `sh!t`, `zebbbi`, and Arabizi prefixes glued to a word such as
+  `l3asba`, `ya7mar`) and Arabic-script output is refused.
+  A user idea containing a blocked word is ignored and the app says so. Checked by `smoke_test.py` (32/32 bad lines
+  blocked, incl. the "3asba" the owner reported and its variants; 0 of 302 template lines and 15 normal look-alikes such as
+  "il fait la gueule", "nike shoes", "kalb 3asabi" or "khobz w zebda" wrongly blocked)
   and by `redteam_captions.py`: 24 ideas that invite insults ("roast my annoying neighbour", "my ex"…) in 3 languages →
   24 clean captions shown (3 answers rejected along the way, all for broken format) — `results/caption_safety/`.
   Limit: a blocklist only knows the words in it; new insults reported by users must be added to `_BLOCKLIST`.
