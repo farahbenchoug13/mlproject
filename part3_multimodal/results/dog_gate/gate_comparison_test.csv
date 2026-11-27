@@ -1,0 +1,3 @@
+gate,dog_accept_rate,cat_false_accept_rate,balanced_accuracy,n_dogs,n_cats
+YOLOv8s only (Part 1 rules),0.962536023054755,0.06862745098039216,0.9469542860371815,694,306
+YOLOv8s + CLIP rescue (τ=0.9),0.9971181556195965,0.06862745098039216,0.9642453523196022,694,306

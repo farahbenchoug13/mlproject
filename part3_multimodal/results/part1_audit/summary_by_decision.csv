@@ -1,0 +1,5 @@
+decision,reason,n,clip_dog
+cats,no_dog,543,372
+removed,no_dog,910,686
+to-check,cat_more_confident,126,85
+to-check,low_conf,127,115

@@ -1,0 +1,11 @@
+{
+  "what": "Manual check of the CLIP diagnostic itself, on the two random 48-photo sheets produced by audit_part1.py (seed 0)",
+  "reviewer": "visual inspection, 2026-11-27",
+  "clip_says_dog": {"n": 48, "clearly_dog": 44, "doubtful": 4,
+                    "doubtful_items": "#3 blurry window, #11 landscape (tiny dog?), #19 blurry fur close-up, #26 dog painting",
+                    "precision_estimate": 0.92},
+  "clip_says_not_dog": {"n": 48, "contains_a_dog": 10,
+                        "notes": "mostly cats, sheep, cows, a lion, a giraffe, plush toys, a statue; the dogs it misses are small in a scene or next to people/cats (scores 0.33-0.89, below the strict 0.90 threshold)"},
+  "extra_finding": "the Kaggle dataset contains non-dogs (sheep, cows, lion, giraffe, plush toys) labelled with dog emotions; Part 1's YOLO correctly removed those",
+  "previous_audit": "40 random photos of data/rejected/cats (2026-11-26): ~25 dogs, ~12 cats, a few with both"
+}

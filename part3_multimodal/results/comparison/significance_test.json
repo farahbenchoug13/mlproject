@@ -1,0 +1,88 @@
+{
+ "n_test": 1986,
+ "models": {
+  "vit_part2": {
+   "name": "ViT-B/16 fine-tuned (Part 2, clean rerun)",
+   "macro_f1": 0.5764148474562217,
+   "accuracy": 0.5926485397784491,
+   "f1_angry": 0.47342995169082125,
+   "f1_happy": 0.6770747740345111,
+   "f1_relaxed": 0.523671497584541,
+   "f1_sad": 0.6314831665150137
+  },
+  "clip_run1": {
+   "name": "CLIP run 1 (GELU mismatch) WiSE-FT a=0.5",
+   "macro_f1": 0.6321198970402514,
+   "accuracy": 0.648539778449144,
+   "f1_angry": 0.5536062378167641,
+   "f1_happy": 0.723336006415397,
+   "f1_relaxed": 0.5774378585086042,
+   "f1_sad": 0.6740994854202401
+  },
+  "clip_run2": {
+   "name": "CLIP run 2 (QuickGELU) WiSE-FT a=0.75 + TTA, clean train",
+   "macro_f1": 0.596006943582792,
+   "accuracy": 0.6198388721047331,
+   "f1_angry": 0.4900398406374502,
+   "f1_happy": 0.6992481203007519,
+   "f1_relaxed": 0.5478348439073515,
+   "f1_sad": 0.6469049694856146
+  },
+  "clip_run2_rec": {
+   "name": "CLIP run 2 + recovered dogs (FINAL)",
+   "macro_f1": 0.6216871471410255,
+   "accuracy": 0.6404833836858006,
+   "f1_angry": 0.5241635687732342,
+   "f1_happy": 0.7210231814548361,
+   "f1_relaxed": 0.5772200772200772,
+   "f1_sad": 0.6643417611159547
+  }
+ },
+ "pairs": [
+  {
+   "A": "vit_part2",
+   "B": "clip_run2_rec",
+   "delta_macro_f1": 0.04527229968480373,
+   "bootstrap_95ci": [
+    0.023595759347485108,
+    0.06534747344523534
+   ],
+   "share_bootstrap_delta_gt_0": 1.0,
+   "mcnemar": {
+    "only_B_right": 252,
+    "only_A_right": 157,
+    "p_value": 3.0429993441983464e-06
+   }
+  },
+  {
+   "A": "clip_run2",
+   "B": "clip_run2_rec",
+   "delta_macro_f1": 0.025680203558233416,
+   "bootstrap_95ci": [
+    0.009690936279439876,
+    0.042089427180649265
+   ],
+   "share_bootstrap_delta_gt_0": 1.0,
+   "mcnemar": {
+    "only_B_right": 123,
+    "only_A_right": 82,
+    "p_value": 0.005085712023699848
+   }
+  },
+  {
+   "A": "vit_part2",
+   "B": "clip_run1",
+   "delta_macro_f1": 0.055705049584029664,
+   "bootstrap_95ci": [
+    0.03422171213704287,
+    0.07625560086807946
+   ],
+   "share_bootstrap_delta_gt_0": 1.0,
+   "mcnemar": {
+    "only_B_right": 262,
+    "only_A_right": 151,
+    "p_value": 5.1958825751610685e-08
+   }
+  }
+ ]
+}

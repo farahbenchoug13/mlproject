@@ -1,0 +1,26 @@
+{
+ "threshold": 0.9,
+ "scope": [
+  [
+   "cats",
+   "no_dog"
+  ],
+  [
+   "removed",
+   "no_dog"
+  ],
+  [
+   "to-check",
+   "cat_more_confident"
+  ],
+  [
+   "to-check",
+   "low_conf"
+  ]
+ ],
+ "n_in_scope": 1706,
+ "n_clip_dog": 1258,
+ "n_dropped_near_dup_val_test": 0,
+ "n_dropped_label_conflict": 0,
+ "n_recovered": 1258
+}

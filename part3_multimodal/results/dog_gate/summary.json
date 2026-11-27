@@ -1,0 +1,24 @@
+{
+ "threshold": 0.9,
+ "n_val": 400,
+ "n_test": 1000,
+ "seed": 42,
+ "results_test": [
+  {
+   "gate": "YOLOv8s only (Part 1 rules)",
+   "dog_accept_rate": 0.962536023054755,
+   "cat_false_accept_rate": 0.06862745098039216,
+   "balanced_accuracy": 0.9469542860371815,
+   "n_dogs": 694,
+   "n_cats": 306
+  },
+  {
+   "gate": "YOLOv8s + CLIP rescue (\u03c4=0.9)",
+   "dog_accept_rate": 0.9971181556195965,
+   "cat_false_accept_rate": 0.06862745098039216,
+   "balanced_accuracy": 0.9642453523196022,
+   "n_dogs": 694,
+   "n_cats": 306
+  }
+ ]
+}

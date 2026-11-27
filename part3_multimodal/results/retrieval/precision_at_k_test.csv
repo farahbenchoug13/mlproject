@@ -1,0 +1,9 @@
+query_set,emotion,query,chance,P@5,P@10,P@25,P@50
+simple,angry,a photo of a angry dog,0.1294058408862034,1.0,1.0,0.88,0.68
+simple,happy,a photo of a happy dog,0.31268882175226587,1.0,0.7,0.72,0.68
+simple,relaxed,a photo of a relaxed dog,0.26988922457200404,0.4,0.5,0.6,0.58
+simple,sad,a photo of a sad dog,0.2880161127895267,1.0,0.8,0.76,0.68
+body_language,angry,"a photo of an angry dog baring its teeth, snarling, ears pinned back",0.1294058408862034,1.0,1.0,0.92,0.72
+body_language,happy,"a photo of a happy dog with an open mouth, tongue out and bright eyes",0.31268882175226587,0.8,0.8,0.8,0.78
+body_language,relaxed,a photo of a calm relaxed dog resting with soft eyes and a loose body,0.26988922457200404,0.6,0.5,0.48,0.5
+body_language,sad,"a photo of a sad dog with drooping ears, downcast eyes and head down",0.2880161127895267,0.4,0.6,0.6,0.6

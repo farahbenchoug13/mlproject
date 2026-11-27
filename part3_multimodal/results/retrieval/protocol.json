@@ -1,0 +1,23 @@
+{
+ "queries": {
+  "simple": {
+   "angry": "a photo of a angry dog",
+   "happy": "a photo of a happy dog",
+   "relaxed": "a photo of a relaxed dog",
+   "sad": "a photo of a sad dog"
+  },
+  "body_language": {
+   "angry": "a photo of an angry dog baring its teeth, snarling, ears pinned back",
+   "happy": "a photo of a happy dog with an open mouth, tongue out and bright eyes",
+   "relaxed": "a photo of a calm relaxed dog resting with soft eyes and a loose body",
+   "sad": "a photo of a sad dog with drooping ears, downcast eyes and head down"
+  }
+ },
+ "search_space": "test split (1,986 images)",
+ "ks": [
+  5,
+  10,
+  25,
+  50
+ ]
+}
