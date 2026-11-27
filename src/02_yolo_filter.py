@@ -23,7 +23,7 @@ MIN_AREA = 0.08      # dog box must cover >= 8% of the image
 PAD = 0.10           # padding around the crop
 PERSON, CAT, DOG = 0, 15, 16
 
-model = YOLO("yolov8s.pt")
+model = YOLO("models/yolov8s.pt")
 
 files = sorted(p for p in RAW.rglob("*") if p.suffix.lower() in EXT)
 if LIMIT:
