@@ -14,7 +14,7 @@ The project is organized into three parts:
 |---|---|---|---|
 | **Part 1** | Raw data inspection, YOLOv8 dog detection & cropping, perceptual deduplication, stratified splitting, class weights | Farah ([@farahbenchoug13](https://github.com/farahbenchoug13)) | Complete (`src/`, `data/`, `outputs/`) |
 | **Part 2** | 10-model benchmark (classic ML → CNNs → ViT), raw vs. clean evaluation, data optimisation strategies (B1–B5), Grad-CAM & diagnostics | Jamila ([@jamila-coder](https://github.com/jamila-coder)) | Complete for raw & clean BEFORE optimisation; optimisation notebooks included (`part2_models/`) |
-| **Part 3** | CLIP experiments (zero-shot → fine-tuning), full pipeline (dog gate → emotion → meme), Gradio app, evaluations | Team member 3 (`Multimodal` branch) | Complete (`part3_multimodal/`, `app.py`) |
+| **Part 3** | CLIP experiments (zero-shot → fine-tuning), full pipeline (dog gate → emotion → meme), Gradio app, evaluations | Amine ([@kacemamine721-star](https://github.com/kacemamine721-star)) | Complete (`part3_multimodal/`, `app.py`) |
 
 ---
 
