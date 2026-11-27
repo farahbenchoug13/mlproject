@@ -70,7 +70,7 @@ mlproject/
 │
 ├── part3_multimodal/                  # Part 3: CLIP, pipeline, evaluations (see part3_multimodal/README.md)
 │   ├── src/                           # dog gate, emotion, captions, memes, search, evaluation scripts
-│   ├── notebooks/                     # Kaggle CLIP fine-tuning notebook (+ its generator)
+│   ├── notebooks/                     # Kaggle CLIP fine-tuning notebook
 │   ├── assets/examples/               # preset photos used by the app
 │   └── results/                       # metrics, significance tests, audits, validation report
 ├── app.py                             # Gradio app (photo / description / both → meme)

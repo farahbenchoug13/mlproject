@@ -204,7 +204,7 @@ Model files (gitignored, too large) go in `part3_multimodal/artifacts/`: `clip_e
 ```
 part3_multimodal/
 ├── src/         pipeline modules + evaluation scripts (see §4–6)
-├── notebooks/   DogTranslator_Part3_CLIP_FineTune.ipynb (current) · dogtranslator-part-3.ipynb (run 1, executed record)
+├── notebooks/   DogTranslator_Part3_CLIP_FineTune.ipynb (Kaggle; run 1's outputs are kept in results/clip_finetune_run1/)
 ├── assets/      examples/ — preset photos used by the app
 ├── artifacts/   model files + CLIP index (gitignored)
 └── results/     clip_finetune_run1/ · clip_finetune_run2/ · part2_clean_rerun/ · comparison/ · dog_gate/ · retrieval/
